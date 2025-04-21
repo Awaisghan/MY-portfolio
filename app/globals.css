@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for fixed header */
+  }
+  
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins);
+    font-weight: bold;
+  }
+  h1 {
+    font-size: 2.25rem; /* text-4xl */
+  }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3rem; /* text-5xl */
+    }
+  }
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 3.75rem; /* text-6xl */
+    }
+  }
+  h2 {
+    font-size: 1.875rem; /* text-3xl */
+  }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2.25rem; /* text-4xl */
+    }
+  }
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 3rem; /* text-5xl */
+    }
+  }
+  h3 {
+    font-size: 1.5rem; /* text-2xl */
+  }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.875rem; /* text-3xl */
+    }
+  }
+  p {
+    font-family: var(--font-inter);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Animation classes */
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s ease forwards;
+}
+
+.animate-slideIn-left {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+.animate-slideIn-right {
+  animation: slideInRight 0.8s ease forwards;
+}
+
+.animate-scale {
+  animation: scale 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Section transitions */
+section {
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
+}
+
+/* Blob animation */
+.blob {
+  animation: blob-animation 25s infinite alternate;
+  filter: blur(40px);
+}
+
+@keyframes blob-animation {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+/* After section transitions, add these animation styles */
+
+/* Scroll Down Arrow Animation */
+.scroll-down-arrow {
+  animation: bounce 2s ease infinite;
+  position: relative;
+}
+
+.scroll-down-arrow::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  border-left: 2px solid hsl(var(--primary));
+  border-bottom: 2px solid hsl(var(--primary));
+  transform: rotate(-45deg);
+  animation: arrowPulse 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes arrowPulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Add perspective to project cards */
+.perspective {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Add hover effects for general buttons */
+.button-hover {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-hover:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.5s;
+}
+
+.button-hover:hover:after {
+  left: 100%;
+}
