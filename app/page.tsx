@@ -47,7 +47,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            Codewith__Ghani
+            Awais Ghani
           </motion.h1>
           
           <div className="h-12 xs:h-14 sm:h-16 md:h-18 lg:h-20 mb-4 sm:mb-6 md:mb-8">
