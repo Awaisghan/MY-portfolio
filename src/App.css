@@ -1994,7 +1994,7 @@
 .footer-heading-wrap {
   text-align: center;
   margin-bottom: 24px;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(28px);
   transition: opacity 0.75s ease, transform 0.75s ease;
 }
@@ -2023,7 +2023,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 80px;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(24px);
   transition: opacity 0.75s ease, transform 0.75s ease;
 }
@@ -2068,7 +2068,7 @@
   gap: 40px;
   padding-bottom: 70px;
   border-bottom: 1px solid var(--border-color);
-  opacity: 0;
+  opacity: 1;
   transform: translateY(28px);
   transition: opacity 0.75s ease, transform 0.75s ease;
 }

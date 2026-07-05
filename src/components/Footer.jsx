@@ -10,7 +10,7 @@ export default function Footer() {
   useEffect(() => {
     const obs = new IntersectionObserver(
       ([e]) => { if (e.isIntersecting) setVisible(true) },
-      { threshold: 0.08 }
+      { threshold: 0, rootMargin: '0px 0px -50px 0px' }
     )
     if (sectionRef.current) obs.observe(sectionRef.current)
     return () => obs.disconnect()
