@@ -3,10 +3,10 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Projects from './components/Projects'
+import Skills from './components/Skills'
 import Experience from './components/Experience'
 import Services from './components/Services'
 import Testimonials from './components/Testimonials'
-import Footer from './components/Footer'
 import SocialSidebar from './components/SocialSidebar'
 import ResumeBtn from './components/ResumeBtn'
 import './App.css'
@@ -29,6 +29,9 @@ function App() {
       {/* Projects Section */}
       <Projects />
 
+      {/* Technical Skills Section */}
+      <Skills />
+
       {/* Experience & Education Section */}
       <Experience />
 
@@ -37,9 +40,6 @@ function App() {
 
       {/* Testimonials — What They Say */}
       <Testimonials />
-
-      {/* Contact & Footer Section */}
-      <Footer />
 
       {/* Bottom Sidebar: Social Links */}
       <SocialSidebar />
