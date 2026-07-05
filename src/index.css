@@ -1,0 +1,82 @@
+:root {
+  --bg-app: #050409;  /* Deep black background for the app */
+  --text-primary: #ffffff;
+  --text-muted: #b4b3c0;
+  --text-subtle: #797787;
+  --accent-purple: #aa3bff;
+  --accent-purple-light: #bd81ff;
+  --accent-purple-glow: rgba(138, 43, 226, 0.85);
+  --border-color: rgba(255, 255, 255, 0.08);
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  font-family: var(--font-sans);
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-app);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ── Typewriter cursor blink ── */
+@keyframes cursorBlink {
+  0%,  100% { opacity: 1; }
+  50%        { opacity: 0; }
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--accent-purple);
+  font-weight: 300;
+  animation: cursorBlink 0.75s step-start infinite;
+  /* keeps layout stable even when cursor is "off" */
+  user-select: none;
+}
