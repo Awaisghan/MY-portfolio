@@ -2305,7 +2305,9 @@ a.footer-link-val:hover {
   gap: 8px;
 }
 .sk-pill {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 6px 14px;
   border-radius: 999px;
   font-size: 12.5px;
@@ -2322,6 +2324,13 @@ a.footer-link-val:hover {
   border-color: var(--sk-color);
   color: #fff;
   transform: scale(1.05);
+}
+.sk-pill-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: brightness(1.1);
 }
 
 /* ── Responsive ───────────────────────────────── */

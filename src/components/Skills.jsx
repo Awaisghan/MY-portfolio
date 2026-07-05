@@ -1,5 +1,54 @@
 import React, { useEffect, useRef, useState } from 'react'
 
+// ── Devicons CDN base ───────────────────────────────────────────────────
+const DI = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons'
+
+// Map skill name → devicons SVG URL (plain or original variant)
+const ICONS = {
+  // Languages
+  'Python':        `${DI}/python/python-original.svg`,
+  'JavaScript':    `${DI}/javascript/javascript-original.svg`,
+  'TypeScript':    `${DI}/typescript/typescript-original.svg`,
+  'PHP':           `${DI}/php/php-original.svg`,
+  'SQL':           `${DI}/azuresqldatabase/azuresqldatabase-original.svg`,
+
+  // Frontend
+  'React.js':      `${DI}/react/react-original.svg`,
+  'Three.js / WebGL': `${DI}/threejs/threejs-original.svg`,
+  'HTML5':         `${DI}/html5/html5-original.svg`,
+  'CSS3':          `${DI}/css3/css3-original.svg`,
+  'MediaPipe':     `${DI}/google/google-original.svg`,
+
+  // Backend
+  'Django':        `${DI}/django/django-plain.svg`,
+  'Laravel':       `${DI}/laravel/laravel-original.svg`,
+  'Node.js':       `${DI}/nodejs/nodejs-original.svg`,
+  'Express.js':    `${DI}/express/express-original.svg`,
+  'REST APIs':     `${DI}/fastapi/fastapi-original.svg`,
+  'JWT Authentication': `${DI}/nodejs/nodejs-original.svg`,
+
+  // Databases
+  'PostgreSQL':    `${DI}/postgresql/postgresql-original.svg`,
+  'MongoDB':       `${DI}/mongodb/mongodb-original.svg`,
+  'MySQL':         `${DI}/mysql/mysql-original.svg`,
+  'SQLite':        `${DI}/sqlite/sqlite-original.svg`,
+
+  // AI / ML
+  'TensorFlow':    `${DI}/tensorflow/tensorflow-original.svg`,
+  'Transfer Learning': `${DI}/pytorch/pytorch-original.svg`,
+  'VGG16':         `${DI}/keras/keras-original.svg`,
+  'DenseNet-201':  `${DI}/keras/keras-original.svg`,
+  'scikit-learn':  `${DI}/scikitlearn/scikitlearn-original.svg`,
+  'Random Forest': `${DI}/python/python-original.svg`,
+  'Computer Vision': `${DI}/opencv/opencv-original.svg`,
+
+  // Tools
+  'Git / GitHub':  `${DI}/github/github-original.svg`,
+  'Docker':        `${DI}/docker/docker-original.svg`,
+  'Android WebView': `${DI}/android/android-original.svg`,
+  'Vercel':        `${DI}/vercel/vercel-original.svg`,
+}
+
 const skillCategories = [
   {
     id: 'languages',
@@ -97,14 +146,19 @@ export default function Skills() {
               <span className="sk-label">{cat.label}</span>
             </div>
 
-            {/* Skill pills */}
+            {/* Skill pills with icons */}
             <div className="sk-pills">
-              {cat.skills.map((skill, j) => (
-                <span
-                  key={skill}
-                  className="sk-pill"
-                  style={{ animationDelay: visible ? `${i * 0.08 + j * 0.05}s` : '0s' }}
-                >
+              {cat.skills.map((skill) => (
+                <span key={skill} className="sk-pill">
+                  {ICONS[skill] && (
+                    <img
+                      src={ICONS[skill]}
+                      alt={skill}
+                      className="sk-pill-icon"
+                      loading="lazy"
+                      onError={(e) => { e.target.style.display = 'none' }}
+                    />
+                  )}
                   {skill}
                 </span>
               ))}
