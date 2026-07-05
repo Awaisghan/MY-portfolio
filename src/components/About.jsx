@@ -26,8 +26,8 @@ function useCounter(target, duration = 1800, started = false) {
 // ── Stats data ─────────────────────────────────────────────────────────
 const stats = [
 
-  { label: 'Happy Clients', value: 10, suffix: '+' },
-  { label: 'Projects Done', value: 15, suffix: '+' },
+  { label: 'Happy Clients', value: 20, suffix: '+' },
+  { label: 'Projects Done', value: 25, suffix: '+' },
   { label: 'Years Experience', value: 2, suffix: '+' },
 ]
 
@@ -78,9 +78,9 @@ export default function About() {
           Computer Science, 7th Semester,{' '}
           <span className="about-highlight">University of Peshawar</span>) with
           hands-on experience delivering{' '}
-          <span className="about-highlight">10+ production web</span> and{' '}
+          <span className="about-highlight">25+ production web</span> and{' '}
           <span className="about-highlight">AI-integrated applications</span> for{' '}
-          15+ direct clients since 2024. Comfortable owning a project end-to-end
+          20+ direct clients since 2024. Comfortable owning a project end-to-end
           across the{' '}
           <span className="about-highlight">MERN stack, Django &amp; Laravel</span>,
           with applied machine learning experience in{' '}
