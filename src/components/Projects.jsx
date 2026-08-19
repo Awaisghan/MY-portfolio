@@ -17,14 +17,24 @@ const projects = [
   },
   {
     num: '02',
-    category: 'AI / Desktop',
-    title: 'FruitVision AI',
-    tech: 'Python · TensorFlow · VGG16 · Tkinter · SQLite',
-    desc: 'Desktop app using VGG16 transfer learning to classify Fresh vs. Rotten fruit with multi-user auth.',
-    img: p2,
+    category: 'Full-Stack',
+    title: 'Healthify — Doctor Appointments',
+    tech: 'Python · Django · PostgreSQL · RBAC',
+    desc: 'Multi-role appointment system (Patient / Doctor / Admin) with symptom checker and payment flow.',
+    img: p5,
+    
   },
   {
     num: '03',
+    category: 'Full-Stack',
+    title: 'AgroShield Store',
+    tech: 'React · Node.js · Express · MongoDB · TypeScript',
+    desc: 'AgriTech e-commerce marketplace with role-based views and secure JWT authentication.',
+    img: p4,
+    
+  },
+  {
+    num: '04',
     category: 'AI / Web',
     title: 'Sales Prediction System',
     tech: 'Python · Django · scikit-learn · Random Forest · Data Viz',
@@ -32,21 +42,16 @@ const projects = [
     img: p3,
   },
   {
-    num: '04',
-    category: 'Full-Stack',
-    title: 'AgroShield Store',
-    tech: 'React · Node.js · Express · MongoDB · TypeScript',
-    desc: 'AgriTech e-commerce marketplace with role-based views and secure JWT authentication.',
-    img: p4,
-  },
-  {
     num: '05',
-    category: 'Full-Stack',
-    title: 'Healthify — Doctor Appointments',
-    tech: 'Python · Django · PostgreSQL · RBAC',
-    desc: 'Multi-role appointment system (Patient / Doctor / Admin) with symptom checker and payment flow.',
-    img: p5,
+    category: 'AI / Desktop',
+    title: 'FruitVision AI',
+    tech: 'Python · TensorFlow · VGG16 · Tkinter · SQLite',
+    desc: 'Desktop app using VGG16 transfer learning to classify Fresh vs. Rotten fruit with multi-user auth.',
+    img: p2,
+    
   },
+  
+  
 ]
 
 export default function Projects() {

@@ -72,24 +72,28 @@ export default function About() {
           Is My <span className="about-heading-white">Passion</span>
         </h2>
 
-        <p className="about-desc">
-          I'm a{' '}
-          <span className="about-highlight">Full-Stack Developer</span> (BS
-          Computer Science, 7th Semester,{' '}
-          <span className="about-highlight">University of Peshawar</span>) with
-          hands-on experience delivering{' '}
-          <span className="about-highlight">25+ production web</span> and{' '}
-          <span className="about-highlight">AI-integrated applications</span> for{' '}
-          20+ direct clients since 2024. Comfortable owning a project end-to-end
-          across the{' '}
-          <span className="about-highlight">MERN stack, Django &amp; Laravel</span>,
-          with applied machine learning experience in{' '}
-          <span className="about-highlight">
-            computer vision &amp; predictive analytics
-          </span>
-          . Published researcher with a strong record of turning client
-          requirements into working, deployed software.
-        </p>
+      <p className="about-desc">
+  I'm a{' '}
+  <span className="about-highlight">Full-Stack Developer</span> with a
+  background in Computer Science from the{' '}
+  <span className="about-highlight">University of Peshawar</span>. Since
+  2024, I've delivered{' '}
+  <span className="about-highlight">25+ production-ready web</span> and{' '}
+  <span className="about-highlight">AI-integrated applications</span> for{' '}
+  <span className="about-highlight">20+ clients</span>.
+
+  I specialize in building scalable, reliable, and user-focused solutions,
+  taking projects from initial requirements to successful deployment. My
+  technical expertise includes the{' '}
+  <span className="about-highlight">MERN stack, Django &amp; Laravel</span>,
+  along with applied machine learning experience in{' '}
+  <span className="about-highlight">
+    computer vision &amp; predictive analytics
+  </span>
+  . With a strong focus on understanding business requirements and delivering
+  real-world results, I help clients turn their ideas into functional,
+  high-quality software.
+</p>
 
         {/* ── Stats counters ── */}
         <div className="about-stats">
