@@ -52,10 +52,10 @@ const projects = [
   {
     num: '06',
     category: 'Full-Stack',
-    title: 'Northbound Digital — Real Estate',
-    desc: 'A professional real estate web platform for a UK-based digital agency. Showcases property listings and agency services with a clean, trust-building design focused on generating leads and establishing authority in the market.',
+    title: 'Maison Estates —  Real Estate',
+    desc: 'A professional real estate web platform for a UK-based digital agency. Showcases property listings and agency services with a clean, trust-building  focused on generating leads and establishing authority in the market.',
     img: p6,
-    link: 'https://northbounddigital.dev/',
+    link: 'https://maisonestates.co.uk/',
   },
   {
     num: '07',
