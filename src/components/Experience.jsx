@@ -3,25 +3,18 @@ import React, { useEffect, useRef, useState } from 'react'
 // ── Data ──────────────────────────────────────────────────────────────
 const experience = [
   {
-    title: 'Full-Stack & AI/ML Developer',
-    company: 'Freelance — Direct Clients (Remote)',
+    title: 'Freelance Full-Stack Developer',
+    company: 'Self-Employed — Remote Clients',
     year: '2024',
     period: 'Present',
-    desc: 'Delivered 10+ production-grade web and AI-integrated applications for 15+ direct clients across e-commerce, healthcare, agritech, and retail domains. Owned the full project lifecycle independently — requirements gathering, system design, development, deployment, and client communication.',
+    desc: 'Working independently as a freelance developer with 2+ years of experience, building and delivering live production websites for clients across e-commerce, real estate, data science, healthcare, and service industries. Handle the complete project lifecycle — from client meetings and system design through to development, deployment, and handover.',
   },
   {
-    title: 'Final Year Project Developer',
-    company: 'University Clients — FYP Systems',
+    title: 'FYP Developer — Student Projects',
+    company: 'Freelance — University Students (Remote)',
     year: '2024',
     period: '2025',
-    desc: 'Designed and developed complete FYP systems for university clients covering full-stack architecture, database design, and AI/ML integration including computer vision and predictive analytics modules.',
-  },
-  {
-    title: 'AI/ML Research Developer',
-    company: 'Published Researcher',
-    year: '2023',
-    period: '2024',
-    desc: 'Applied machine learning for computer vision and predictive analytics use cases. Built solutions spanning React/Three.js, Django, Laravel, and the MERN stack with published research outcomes.',
+    desc: 'Developed complete Final Year Project systems for university students across Pakistan. Built full-stack applications with AI/ML modules including computer vision (VGG16 fruit classifier) and predictive analytics (Random Forest sales prediction) — handling architecture, database design, and deployment end-to-end.',
   },
 ]
 
@@ -29,23 +22,23 @@ const education = [
   {
     title: 'BS Computer Science',
     company: 'University of Peshawar',
-    year: '2022',
-    period: 'Present',
-    desc: 'Currently in 7th Semester. Studying core CS fundamentals, data structures, algorithms, databases, software engineering, and applied machine learning. Active in research and project work.',
+    year: '2021',
+    period: '2025',
+    desc: 'Completed a 4-year Bachelor\'s degree in Computer Science. Covered core CS fundamentals including data structures, algorithms, databases, software engineering, and applied machine learning. Graduated with hands-on research and real-world project experience.',
   },
   {
     title: 'FSc Pre-Engineering',
-    company: 'Board of Intermediate & Secondary Education',
-    year: '2020',
-    period: '2022',
-    desc: 'Completed FSc Pre-Engineering with distinction. Built a strong foundation in mathematics, physics, and analytical problem solving that drives my approach to software architecture.',
+    company: 'Board of Intermediate & Secondary Education, Peshawar',
+    year: '2019',
+    period: '2021',
+    desc: 'Completed FSc Pre-Engineering with strong performance in mathematics and physics. Built an analytical foundation that directly supports my approach to software architecture, problem solving, and system design.',
   },
   {
     title: 'Matriculation (Science)',
-    company: 'Board of Secondary Education',
-    year: '2018',
-    period: '2020',
-    desc: 'Completed Secondary School Certificate in Science. Developed early interest in computing and technology during this period.',
+    company: 'Board of Secondary Education, Peshawar',
+    year: '2017',
+    period: '2019',
+    desc: 'Completed SSC in Science with distinction. Developed an early passion for computing and technology, which set the foundation for pursuing a career in software development.',
   },
 ]
 

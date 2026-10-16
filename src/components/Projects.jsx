@@ -5,53 +5,66 @@ import p2 from '../assets/projects-2.png'
 import p3 from '../assets/projects-3.png'
 import p4 from '../assets/projects-4.png'
 import p5 from '../assets/projects-5.png'
+import p6 from '../assets/projects-6.png'
+import p7 from '../assets/projects-7.png'
 
 const projects = [
   {
     num: '01',
-    category: 'AI / Web',
-    title: 'AuraLeathers — AI Jacket Builder',
-    tech: 'React · Three.js · MediaPipe · Laravel · Docker · Android WebView',
-    desc: 'AI-powered 3D product customizer with real-time AR fitting and a native Android companion app.',
+    category: 'Full-Stack',
+    title: 'Pycode Data Science Company',
+    desc: 'A sleek corporate website for a UK-based data science firm, built to convert visitors into clients. Features project showcases, service breakdowns, and a modern UI that communicates expertise in machine learning, AI, and data analytics.',
     img: p1,
+    link: 'https://www.pycode.co.uk/',
   },
   {
     num: '02',
-    category: 'Full-Stack',
-    title: 'Healthify — Doctor Appointments',
-    tech: 'Python · Django · PostgreSQL · RBAC',
-    desc: 'Multi-role appointment system (Patient / Doctor / Admin) with symptom checker and payment flow.',
-    img: p5,
-    
+    category: 'SaaS / AI',
+    title: 'RankPartner — SEO Tool',
+    desc: 'A full-featured SaaS platform for marketing agencies and freelancers. Delivers AI-powered keyword tracking, competitor analysis, and automated content optimization — all within a multi-client dashboard designed for scalable SEO management.',
+    img: p2,
+    link: 'https://rankpartner.io/',
   },
   {
     num: '03',
-    category: 'Full-Stack',
-    title: 'AgroShield Store',
-    tech: 'React · Node.js · Express · MongoDB · TypeScript',
-    desc: 'AgriTech e-commerce marketplace with role-based views and secure JWT authentication.',
+    category: 'E-Commerce',
+    title: 'Shopping Store',
+    desc: 'A responsive e-commerce storefront with a smooth product browsing experience, cart management, and secure checkout flow. Designed with performance and conversion in mind, delivering a polished shopping experience across all devices.',
     img: p4,
-    
+    link: 'https://e-commerce-website-orpin-zeta-30.vercel.app/',
   },
   {
     num: '04',
-    category: 'AI / Web',
-    title: 'Sales Prediction System',
-    tech: 'Python · Django · scikit-learn · Random Forest · Data Viz',
-    desc: 'Django web app that forecasts product sales from uploaded datasets with interactive dashboards.',
+    category: 'E-Commerce',
+    title: 'Shoes Mart — Footwear Store',
+    desc: 'A dedicated online footwear store featuring category filtering, product detail pages, and a streamlined purchasing flow. Built with a clean, brand-forward UI that keeps the focus on the products and drives user engagement.',
     img: p3,
+    link: 'https://shoes-store-beryl.vercel.app/',
   },
   {
     num: '05',
-    category: 'AI / Desktop',
-    title: 'FruitVision AI',
-    tech: 'Python · TensorFlow · VGG16 · Tkinter · SQLite',
-    desc: 'Desktop app using VGG16 transfer learning to classify Fresh vs. Rotten fruit with multi-user auth.',
-    img: p2,
-    
+    category: 'Full-Stack',
+    title: 'Juice Land — Fruit Store',
+    desc: 'A vibrant e-commerce platform for a fresh juice and fruit brand. Includes product listings, an intuitive cart system, and a visually rich storefront designed to reflect the freshness and energy of the brand identity.',
+    img: p5,
+    link: 'https://juicesisland.pk/',
   },
-  
-  
+  {
+    num: '06',
+    category: 'Full-Stack',
+    title: 'Northbound Digital — Real Estate',
+    desc: 'A professional real estate web platform for a UK-based digital agency. Showcases property listings and agency services with a clean, trust-building design focused on generating leads and establishing authority in the market.',
+    img: p6,
+    link: 'https://northbounddigital.dev/',
+  },
+  {
+    num: '07',
+    category: 'Full-Stack',
+    title: 'Aurora Sports Therapy',
+    desc: 'A professional service website for a UK sports therapy clinic. Presents treatments, therapist profiles, and booking information in a calming, credible layout — helping clients easily find the care they need.',
+    img: p7,
+    link: 'https://aurorasportstherapy.co.uk/',
+  },
 ]
 
 export default function Projects() {
@@ -132,8 +145,11 @@ export default function Projects() {
 
         <div className="proj-track" ref={scrollRef}>
           {projects.map((proj, i) => (
-            <div
+            <a
               key={proj.num}
+              href={proj.link}
+              target="_blank"
+              rel="noopener noreferrer"
               data-idx={i}
               className={`proj-card ${visibleCards.includes(i) ? 'proj-card-visible' : ''}`}
               style={{ transitionDelay: visibleCards.includes(i) ? `${i * 0.08}s` : '0s' }}
@@ -146,17 +162,22 @@ export default function Projects() {
 
               <h3 className="proj-title">{proj.title}</h3>
 
-              <p className="proj-tech-label">Technologies used</p>
-              <p className="proj-tech">{proj.tech}</p>
-
               <p className="proj-desc">{proj.desc}</p>
 
               {/* image */}
               <div className="proj-img-wrap">
                 <img src={proj.img} alt={proj.title} className="proj-img" />
                 <div className="proj-img-overlay" />
+                {/* link icon overlay */}
+                <div className="proj-link-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
